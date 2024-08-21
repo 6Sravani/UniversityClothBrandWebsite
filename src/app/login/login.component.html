@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="w-50">
+    <h2>Login</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password">
+      </div>
+      <button class="btn btn-primary" (click)="onSubmit(email, password, name)">Login</button>
+    </form>
+  </div>
+</div>

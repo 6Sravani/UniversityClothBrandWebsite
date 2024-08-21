@@ -1,0 +1,15 @@
+body{
+    padding-top: 30px;
+}
+#atc:hover{
+    background-color: #ec691f;
+    border: 0;
+}
+.navbar{
+    background-color:  #ec691f;
+    margin: 0px;
+    font-weight: 500;
+}
+a{
+    color: black;
+}

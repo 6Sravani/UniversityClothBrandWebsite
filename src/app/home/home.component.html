@@ -1,0 +1,61 @@
+
+  <div class="container-fluid p-0">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      </div>  
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/picture/main1-logo-removebg.png" class="image-fluid w-100" style="height:700px" alt="...">
+          <div class="carousel-caption d-none d-md-block text-center">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container1 p-4 ms-50 me-50" style="margin-left: 80px;margin-right: 80px;">
+      <div class="row text-center" style="padding: 5px;">
+        <header>
+        Trending
+        </header>
+      </div>
+      <div class="row m-2 p-4">
+        <ng-container *ngFor="let product of producttrending; let i = index">
+          <div class="col-lg-4" *ngIf="i < 3">
+            <div class="card text-center">
+              <img [src]="product.imageUrl" alt="Product Image" class="card-img-top" height="350px">
+              <div class="card-body " style="padding-bottom: 50px;">
+                <h3 class="card-title">{{ product.name }}</h3>
+                <p class="card-text">Rs.{{ product.price}}</p>
+              </div>
+              <button (click)="addToCart(product)" class="btn btn-primary" routerLink="/trending"><h3 id="catag">Add to Cart</h3></button>
+
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    
+    
+
+    <div class="container1 p-4 ms-50 me-50" style="margin-left: 80px;margin-right: 80px;">
+      <div class="row text-center" style="padding: 5px;">
+        <header>
+        Categories
+        </header>
+      </div>
+      <div class="row m-2 p-4">
+        <ng-container *ngFor="let product of categorie; let i = index">
+          <div class="col-lg-4 text-center" *ngIf="i < 3">
+            <div class="card text-center" style="padding-bottom: 30px;">
+              <img [src]="product.imageUrl" alt="Product Image" class="card-img-top" height="350px">
+              <div class="card-body">
+                <button class="btn btn-primary" routerLink="/{{product.name}}"><h3 class="card-title" id="catag">{{ product.name }}</h3></button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    
+  </div>
+
